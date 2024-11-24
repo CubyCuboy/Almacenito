@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/no_permiso.css' %}">
+    <title>Permiso Denegado</title>
+</head>
+<body>
+    <h1>Acceso Restringido</h1>
+    <p>{{ mensaje }}</p>
+    
+    {% if previous_url %}
+        <a href="{{ previous_url }}">Regresar a la página anterior</a>
+    {% endif %}
+    
+    <a href="{% url 'index' %}">Ir al inicio</a>
+    <a href="{% url 'exit' %}">Cerrar sesión</a>
+</body>
+</html>

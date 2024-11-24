@@ -1,0 +1,49 @@
+#sugerencias {
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+button:disabled {
+    background-color: #dcdcdc;
+    border-color: #ccc;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+button[disabled]:hover {
+    /* Cambia el estilo si es necesario al pasar el mouse */
+    opacity: 0.6;
+}
+
+button[disabled]:hover::after {
+    content: attr(title); /* Mostrar el mensaje del título */
+    position: absolute;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 5px;
+    border-radius: 5px;
+    top: 35px;
+    z-index: 1000;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+.btn-primary, .btn-success, .btn-secondary {
+    font-size: 16px; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
